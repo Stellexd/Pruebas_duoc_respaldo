@@ -6,7 +6,9 @@ trabajadores = ["Juan Pérez", "María García", "Carlos López", "Ana Martínez
 sueldos = []
 
 def asignar_sueldo_random(self):
-    
+    sueldos =[random.randint(300000, 2500000) in trabajadores]
+    print("sueldo asignado aleatoriamente correctamente")
+    print(sueldos)
     
     
 def clasificar_sueldos(self):
@@ -25,7 +27,7 @@ def menu():
         
         if opc == 1:
             asignar_sueldo_random()
-        elif opc == 2:()
+        elif opc == 2:
             clasificar_sueldos()
         elif opc == 3:
             ver_sueldos()

@@ -13,7 +13,18 @@ def asignar_sueldo_random():
     
     
 def clasificar_sueldos():
+    menores_800=[]
+    entre_800_2mill= []
+    mayores_2mill= []
     
+    for i, sueldo in enumerate (sueldos):
+        if sueldo < 800000:
+            menores_800.append((trabajadores[i], sueldo))
+        elif 800000 <= sueldo <= 2000000:
+            entre_800_2mill.append((trabajadores[i], sueldo))
+        else:
+            mayores_2mill.append((trabajadores[i],sueldo))
+            
 def ver_sueldos():
 
 

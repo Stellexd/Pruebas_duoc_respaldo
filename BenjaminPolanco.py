@@ -24,13 +24,25 @@ def clasificar_sueldos():
             entre_800_2mill.append((trabajadores[i], sueldo))
         else:
             mayores_2mill.append((trabajadores[i],sueldo))
+    print("Sueldos menores a $800.000")
+    for empleado, sueldo in menores_800:
+        print(f"{empleado}su sueldo es: {sueldo}")
+    
+    print("\nSueldos entre $800.000 y $2.000.000")
+    for empleado, sueldo in entre_800_2mill:
+        print(f"{empleado} su sueldo es: {sueldo}")
+    
+    print("\nSueldos superiores a $2.000.000")
+    for empleado, sueldo in mayores_2mill:
+        print(f"{empleado}su sueldo es:{sueldo}")
+        
             
 def ver_sueldos():
     sueldo_max = max(sueldos)
     sueldo_min = min(sueldos)
     promedio_sueldo=sum(sueldos) / len(sueldos)
     media_geometrica = math.prod(sueldos) **(1/len(sueldos))
-    print(f"sueldo mas alto: {sueldo_max}, sueldo bajo: {sueldo_min}, sueldo promedio: {promedio_sueldo}, media geometrica{media_geometrica}")
+    print(f"sueldo mas alto: {sueldo_max}, sueldo bajo: {sueldo_min}, sueldo promedio: {promedio_sueldo}, media geometrica:4 {media_geometrica}")
 def reporte_de_sueldos():
     descuentos =[]
     for sueldo in sueldos:

@@ -26,8 +26,10 @@ def clasificar_sueldos():
             mayores_2mill.append((trabajadores[i],sueldo))
             
 def ver_sueldos():
-
-
+    sueldo_max = max(sueldos)
+    sueldo_min = min(sueldos)
+    promedio_sueldo=sum(sueldos) / len(sueldos)
+    media_geometrica = math.prod(sueldos) **(1/len(sueldos))
 def reporte_de_sueldos():
     
 def salir():

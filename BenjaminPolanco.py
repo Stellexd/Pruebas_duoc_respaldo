@@ -38,12 +38,14 @@ def reporte_de_sueldos():
         suel_liquido = sueldo -salud -afp
         descuentos.append((sueldo,salud, afp, sueldo))
         
-        with open ('reporte_de_sueldos.csv', 'w', newline='') as csvfile:
-            nombres_doc= ['Nombre', 'Sueldo Base', 'Descuento Salud', 'Descuento AFP', 'Sueldo Líquido']
-            writer = csv.DictWriter(csvfile, nombres_doc=nombres_doc)
-            writer.writeheader()
-            for i, desc in enumerate(descuentos):
-                writer.writerow({'Nombre': trabajadores[i], 'Sueldo Base': desc[0], 'Descuento Salud': desc[1], 'Descuento AFP': desc[2], 'Sueldo Líquido': desc[3]})
+    with open('reporte_sueldos.csv', 'w', newline='') as csvfile:
+        fieldnames = ['Nombre', 'Sueldo Base', 'Descuento Salud', 'Descuento AFP', 'Sueldo Líquido']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writeheader()
+        for i, desc in enumerate(descuentos):
+            writer.writerow({'Nombre': trabajadores[i], 'Sueldo Base': desc[0], 'Descuento Salud': desc[1], 'Descuento AFP': desc[2], 'Sueldo Líquido': desc[3]})
+
         print("se genero reporte_sueldos.csv")
     
 def salir():

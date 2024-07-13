@@ -5,15 +5,16 @@ import math
 trabajadores = ["Juan Pérez", "María García", "Carlos López", "Ana Martínez", "Pedro Rodríguez", "Laura Hernández", "Miguel Sánchez", "Isabel Gómez", "Francisco Díaz", "Elena Fernández"]
 sueldos = []
 
-def asignar_sueldo_random(self):
-    sueldos =[random.randint(300000, 2500000) in trabajadores]
+def asignar_sueldo_random():
+    global sueldos
+    sueldos =[random.randint(300000, 2500000) for _ in trabajadores]
     print("sueldo asignado aleatoriamente correctamente")
-    print(sueldos)
     
     
-def clasificar_sueldos(self):
     
-def ver sueldos():
+def clasificar_sueldos():
+    
+def ver_sueldos():
 
 
 def reporte_de_sueldos():

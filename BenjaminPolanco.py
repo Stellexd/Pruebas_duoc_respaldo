@@ -30,6 +30,7 @@ def ver_sueldos():
     sueldo_min = min(sueldos)
     promedio_sueldo=sum(sueldos) / len(sueldos)
     media_geometrica = math.prod(sueldos) **(1/len(sueldos))
+    print(f"sueldo mas alto: {sueldo_max}, sueldo bajo: {sueldo_min}, sueldo promedio: {promedio_sueldo}, media geometrica{media_geometrica}")
 def reporte_de_sueldos():
     descuentos =[]
     for sueldo in sueldos:
@@ -52,7 +53,7 @@ def salir():
     exit()
 def menu():
     while True:
-        print("menu \n1.asignar sueldos aleatorios\n2.clasificar sueldos\n3.ver estadistica\n4.reporte de sueldo\n5.salir")
+        print("\nMenu \n1.asignar sueldos aleatorios\n2.clasificar sueldos\n3.ver estadistica\n4.reporte de sueldo\n5.salir")
         opc= int(input())
         
         if opc == 1:
@@ -68,6 +69,5 @@ def menu():
         else:
             print("no valido")
             continue
-        
-menu()        
-        
+if __name__ == "__main__":
+    menu()
